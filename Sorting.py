@@ -1,3 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_excel('Covid Dashboard.xlsx', sheet_name='Data')
+data_2d_array = df.values.tolist()
+
+columns = df.columns.tolist()
+
+def bar_plot(array):
+
+
+
+def insertion_sort(arr, col_idx):
+    left = 0
+    right = None
+
+    if right is None:
+        right = len(arr) - 1
+
+    for i in range(left + 1, right + 1):
+        curr = arr[i]
+        j = i
+
+        while j > left and arr[j - 1][col_idx] > curr[col_idx]:
+            arr[j] = arr[j - 1]
+            j = j - 1
+
+        arr[j] = curr
+
 def merge_sort(arr, col_idx):
     if len(arr) <= 1:
         return arr
