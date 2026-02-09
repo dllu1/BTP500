@@ -81,7 +81,7 @@ else:
 
 print()
 
-# Test 4: Linear Search on non-existent column (Unsuccessful)
+# Linear Search on non-existent column (Unsuccessful)
 print("Unsuccessful Linear Search:")
 non_existent_search_result = linear_search(data_2d_array, "ABCDE", 100000)
 print("Searching in 'ABCDE' = 100000:")
