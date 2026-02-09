@@ -185,6 +185,21 @@ def main():
     else:
         print("Not Found.")
 
+    # Scenario D: Search by Total Cases (Numeric)
+    print(f"\n[Scenario D] Binary Search in '{COL_ZONE}'")
+    print("   (Sorting data by State name first...)")
+
+    # Sort a copy for Binary Search
+    sorted_by_zone = Sorting.quick_sort(copy.deepcopy(data), idx_zone)
+
+    target_zone = "South"
+    print(f"Searching for all rows in '{target_zone}' Zone...")
+    found_row = Search.binary_search(sorted_by_zone, idx_zone, target_zone)
+    if found_row:
+        print(f"SUCCESS: Found a record in '{target_zone}': {found_row[idx_state]}")
+    else:
+        print("Not found.")
+
     # PART 3: SORTING & VISUALIZATION
     print("\n3. Sorting & Visualization")
     print(f"Sorting by '{COL_CASES}'...")
