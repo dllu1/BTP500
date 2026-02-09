@@ -7,8 +7,20 @@ data_2d_array = df.values.tolist()
 columns = df.columns.tolist()
 
 def bar_plot(array):
+    top_10 = array[:10]
 
+    states = [state[0] for state in top_10]
+    total_cases = [state[2] for state in top_10]
 
+    plt.figure(figsize=(12, 6))
+    bars = plt.bar(states, total_cases, color='blue', edgecolor='black')
+
+    plt.xlabel('State/UT', fontsize=12)
+    plt.ylabel('Total Cases', fontsize=12)
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(axis='y', alpha=0.3)
+
+    plt.show()
 
 def insertion_sort(arr, col_idx):
     left = 0
@@ -68,3 +80,5 @@ def quick_sort(arr, col_idx):
     middle = [x for x in arr if x[col_idx] == pivot[col_idx]]
 
     return quick_sort(left, col_idx) + middle + quick_sort(right, col_idx)
+
+bar_plot(data_2d_array)
