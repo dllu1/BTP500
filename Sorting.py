@@ -38,6 +38,7 @@ def insertion_sort(arr, col_idx):
             j = j - 1
 
         arr[j] = curr
+    return arr
 
 def merge_sort(arr, col_idx):
     if len(arr) <= 1:
@@ -69,6 +70,7 @@ def merge_sort(arr, col_idx):
         arr[k] = right[j]
         j += 1
         k += 1
+
 
 def quick_sort(arr, col_idx):
     if len(arr) <= 1:

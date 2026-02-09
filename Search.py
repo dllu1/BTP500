@@ -7,6 +7,7 @@ data_2d_array = df.values.tolist()
 
 columns = df.columns.tolist()
 
+
 def linear_search(array, search_column, search_value ):
     col_index = -1
     for i in range(len(columns)):
@@ -33,6 +34,7 @@ def linear_search(array, search_column, search_value ):
         return matches
     else:
         return -1
+
 
 def binary_search(arr, col_idx, target):
     low = 0
