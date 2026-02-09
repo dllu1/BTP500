@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 df = pd.read_excel('Covid Dashboard.xlsx', sheet_name='Data')
@@ -7,6 +8,7 @@ data_2d_array = df.values.tolist()
 columns = df.columns.tolist()
 
 def linear_search(array, search_column, search_value ):
+    col_index = -1
     for i in range(len(columns)):
         if columns[i] == search_column:
             col_index = i
